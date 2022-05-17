@@ -1,0 +1,1 @@
+C:\Programs\iverilog\bin\gtkwave.exe test.vcd
