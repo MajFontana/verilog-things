@@ -63,6 +63,8 @@ module Main
 	
 	// Simulation
 	assign jb = jb_drive;
+	assign CLK = clk;
+	assign LOCKED = 1'd1;
 	
 	// IO
 	assign SW = sw;
@@ -94,9 +96,6 @@ module Main
 	end
 	
 	// Clock
-	assign CLK = clk;
-	assign LOCKED = 1'd1;
-	
 	/*clk_wiz_v3_6 clock
    (	// Clock in ports
 		.CLK_IN1(clk), // IN
@@ -113,8 +112,8 @@ module Main
 	assign LED = 0;
 	assign PMOD_OUT = 0;
 	assign PMOD_DIR = 0;
-	
-	UartEcho echo (RST, CLK, UART_RX, UART_TX);
+	assign UART_TX = 0;
+
 	
 	
 	//////// Simulation ////////
